@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy-Aware AI Assistant</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="title">
+        <span class="logo">🛡️</span>
+        <h1>Privacy-Aware AI Assistant</h1>
+      </div>
+      <div id="riskBadge" class="badge badge-low">LOW</div>
+    </header>
+
+    <section class="section">
+      <label class="label">Selected Text</label>
+      <textarea id="inputText" class="textarea" rows="6" placeholder="Select text on a page, then open this popup..."></textarea>
+      <div id="reasons" class="reasons"></div>
+    </section>
+
+    <section class="actions">
+      <button id="btnMask" class="btn btn-secondary">Mask Data</button>
+      <button id="btnSend" class="btn btn-primary">Send to AI</button>
+    </section>
+
+    <section class="section">
+      <label class="label">AI Response</label>
+      <div id="output" class="output"></div>
+      <div id="spinner" class="spinner hidden"></div>
+    </section>
+
+    <footer class="footer">
+      <small>Last updated is saved locally.</small>
+    </footer>
+  </div>
+
+  <script src="utils/detectSensitive.js"></script>
+  <script src="utils/maskData.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
+

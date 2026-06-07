@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy-Aware AI Assistant",
+  "description": "Detects and masks sensitive data in selected text, then sends safe text to Gemini for analysis.",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Privacy-Aware AI Assistant"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
