@@ -2,7 +2,7 @@
 
 // Provide your Gemini API key here or load it from chrome.storage (optional enhancement)
 // For now, use a placeholder. The user should replace with their own key.
-const GEMINI_API_KEY = "AIzaSyAHmazVrb4FHsRjLj99WUkE9jGvXssn34E"; // TODO: Insert your Gemini API key
+const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"; // TODO: Insert your Gemini API key
 
 // Load the Gemini service
 try {
